@@ -1,0 +1,4 @@
+tokopedia_username=username
+tokopedia_password=password
+jeda_waktu_klik_iklan_dalam_jam=1
+acak_promo_perjam=1

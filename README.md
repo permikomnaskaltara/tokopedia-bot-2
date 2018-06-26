@@ -7,3 +7,5 @@ Copyright 2018 by Ringlayer Robotic
 www.ringlayer.com
 
 www.ringlayer.net
+
+https://ringlayer.wordpress.com

@@ -53,7 +53,12 @@ def _init_tokopedia_browser(url):
         ua = scrapper_randomize_ua()
         profile.set_preference("general.useragent.override", ua)
         profile.update_preferences()
-        browser = webdriver.Firefox(firefox_profile=fp, executable_path=r'geckodriver.exe')
+        try:
+            browser = webdriver.Firefox(firefox_profile=fp, executable_path='c:\Windows\System32\geckodriver.exe')
+        except:
+            browser = webdriver.Firefox(firefox_profile=fp, executable_path=r'geckodriver.exe')
+            pass
+
         #browser = webdriver.Firefox(firefox_profile=profile)
         browser.get(url)
         while (len(html_source) < 100) or (html_source.find("</html>") == -1):
@@ -220,7 +225,7 @@ def read_uname_pass_from_cfg():
         print ("[-] exception :" + inspect.stack()[0][3])
         pass
 
-'''
+
 def set_working_dir():
     try:
         current_dir = os.popen("cd").read()
@@ -232,7 +237,7 @@ def set_working_dir():
         print(e)
         print ("[-] exception :" + inspect.stack()[0][3])
         pass
-'''
+
 def scrapper_randomize_from_list(list_collections):
     selected_data = ""
     try:

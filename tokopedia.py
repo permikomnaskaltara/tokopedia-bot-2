@@ -54,9 +54,13 @@ def _init_tokopedia_browser(url):
         profile.set_preference("general.useragent.override", ua)
         profile.update_preferences()
         try:
-            browser = webdriver.Firefox(firefox_profile=fp, executable_path='c:\Windows\System32\geckodriver.exe')
+            browser = webdriver.Firefox(firefox_profile=profile, executable_path='c:\Windows\System32\geckodriver.exe')
         except:
-            browser = webdriver.Firefox(firefox_profile=fp, executable_path=r'geckodriver.exe')
+            try:
+                browser = webdriver.Firefox(firefox_profile=profile, executable_path=r'geckodriver.exe')
+            except:
+                browser = webdriver.Firefox(firefox_profile=profile)
+                pass
             pass
 
         #browser = webdriver.Firefox(firefox_profile=profile)

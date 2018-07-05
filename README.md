@@ -5,6 +5,12 @@ How to install ?
 
 Copy geckodriver.exe to c:\Windows\System32
 
+Edit your tokopedia username and password at config.txt
+
+tokopedia.exe ready to run
+
+
+
 Copyright 2018 by Ringlayer Robotic
 
 

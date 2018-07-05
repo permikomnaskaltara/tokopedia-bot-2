@@ -1,6 +1,10 @@
 # tokopedia_bot
 Tokopedia Bot Version 2 - Python 3 Selenium
 
+How to install ?
+
+Copy geckodriver.exe to c:\Windows\System32
+
 Copyright 2018 by Ringlayer Robotic
 
 
